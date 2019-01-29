@@ -9,6 +9,6 @@ Steps to use it
 3. Run ```git fetch -all```
 4. One folder up from your kernel source put the find_tag.sh and the tags.txt
 5. In the find_tag.sh edit the repo dir to point at yours
-6. To generate the tags.txt either manually put your tags in or do a command like this to get it be sure to change the regex part to match your kernel  ```git -C ${REPO_DIR} ls-remote --tags caf '*LA\.BR\.*8x16*[0-9]' | sed s'/[ \t]\+/ /'g | cut -d' ' -f2```
+6. To generate the tags.txt either manually put your tags in or do a command like this to get it be sure to change the regex part to match your kernel  ```git -C ${REPO_DIR} tag -l LA.BR.*8x16*```
 7. Run the script and wait for it to finish to tell you the best tag.
 8. Enjoy
